@@ -1,0 +1,57 @@
+/* Name: Kayla Heady
+Date:1/13/22
+Assignment:Homework 1
+Due Date:1/19/22
+About this project: Harry potter trolly cart menu and order
+Assumptions: Assuming vaild input 
+
+All work below was performed by Kayla Heady */
+
+
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main()
+{
+    // declaring variables and initialized
+    const double bertieB = 4.00, choc = 1.50, explo = 2.50, caulCakes = 6.25;
+    int bbAmount, choAmount, exploAmount, cauldAmount;
+    double total1, total2, finalTotal; 
+    const double TAX = .0650;
+    
+      cout << "Anything off of the trolley, dears?"<< endl;
+      
+      cout << '\n'<<'\t' << '\t' << "  TROLLEY MENU" << endl;     // Trolly Menu
+      cout << '\t' << '\t' << "-----------------" << endl;
+      cout << fixed << showpoint << setprecision(2);              // for two decimal places
+      cout << '\t' << '\t' << " Bertie Bott's Every Flavour Beans: $" << bertieB << endl;
+      cout << '\t' << '\t' << " Chocolate Frog: $" << choc << endl;
+      cout << '\t' << '\t' << " Exploding Bonbons: $" << explo << endl;
+      cout << '\t' << '\t' << " Cauldron Cakes: $" << caulCakes << endl;
+      cout << '\t' << '\t' << "-----------------" << endl;
+      
+      // Asking user what they want from the cart
+     cout << '\n' <<"How many Bertie Bott's Every Flavour Beans? ";  
+     cin >> bbAmount;
+     cout << "How many Chocolate Frog? ";
+     cin >> choAmount;
+     cout << "How many Exploding Exploding Bonbons? ";
+     cin >> exploAmount;
+     cout << "How many Cauldron Cakes? ";
+     cin >> cauldAmount;
+     
+     // multipling the amounts and the price and adding them together 
+     total1 = bbAmount * bertieB + choAmount * choc + exploAmount * explo + caulCakes * cauldAmount; 
+     total2 = total1 * TAX;  // How much tax on the items
+     finalTotal = total2 + total1; // Final total including tax
+     
+     cout << '\n' << "Total (Before Wizard Tax): $" << total1 << endl; /// Print for user 
+     cout << "Tax (6.50%): $" << total2 << endl; // Printing the amount of tax the order used
+     cout << "Total (After Wizard Tax): $" << finalTotal<< endl;
+     
+     cout<< '\n' << "Enjoy your candies!";
+     
+     return 0;
+}
+
